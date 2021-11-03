@@ -72,29 +72,28 @@ def main():
     
     
 	#C++ timings
-	nc = []
-	tc = []
-	for n in range(30,45):
-		f = Integer(n)
-		tstart = time.perf_counter ()
-		f.fib()
-		tstop = time.perf_counter ()
-		ttaken = tstop - tstart
-		tc.append(ttaken)
-		nc.append(n)
-	print(tc)
-		
+    nc = []
+    tc = []
+    for n in range(30,45):
+        f= Integer(n)
+        tstart = time.perf_counter ()
+        f.fib()
+        tstop = time.perf_counter ()
+        ttaken = tstop - tstart
+        tc.append(ttaken)
+        nc.append(n)
+    print(tc)
 	# Python timings
-	np = []
-	tp = []
-	for n in range(30,45):
-		tstart = time.perf_counter ()
-		fib_py(n)
-		tstop = time.perf_counter ()
-		ttaken = tstop - tstart
-		np.append(n)
-		tp.append(ttaken)
-	print(tp)
+    np = []
+    tp = []
+    for n in range(30,45):
+        tstart = time.perf_counter ()
+        fib_py(n)
+        tstop = time.perf_counter ()
+        ttaken = tstop - tstart
+        np.append(n)
+        tp.append(ttaken)
+    print(tp)
     # f = Integer(5)
     # print(f.get())
     # f.set(7)
