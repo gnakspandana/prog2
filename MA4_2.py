@@ -3,6 +3,14 @@
 from integer import Integer
 import random
 import matplotlib.pyplot as plt
+import time
+
+def fib_py(n):
+	if n<=1:
+		return n
+	else:
+		return (fib_py(n-1) + fib_py(n-2))
+
 
 def matrix(n): #n number of random points
     c=0
@@ -61,11 +69,42 @@ def main():
     #     plt.scatter(x1,y1, color='red')
     #     plt.scatter(x2,y2, color='blue')
     #     plt.plot()
-        
-    f = Integer(5)
-    print(f.get())
-    f.set(7)
-    print(f.get())
+    
+    
+	#C++ timings
+	nc = []
+	tc = []
+	for n in range(30,45):
+		f = Integer(n)
+		tstart = time . perf_counter ()
+		f.fib()
+		tstop = time . perf_counter ()
+		ttaken = tstop - tstart
+		tc.append(ttaken)
+		nc.append(n)
+	print(tc)
+# 	# fib 47
+# 	f = Integer(47)
+# 	tstart = time . perf_counter ()
+# 	f.fib()
+# 	tstop = time . perf_counter ()
+# 	print (f" Measured time in C++ : {tstop - tstart } seconds ")
+		
+	# Python timings
+	np = []
+	tp = []
+	for n in range(30,45):
+		tstart = time . perf_counter ()
+		fib_py(n)
+		tstop = time . perf_counter ()
+		ttaken = tstop - tstart
+		np.append(n)
+		tp.append(ttaken)
+	print(tp)
+    # f = Integer(5)
+    # print(f.get())
+    # f.set(7)
+    # print(f.get())
 
 if __name__ == '__main__':
     main()
