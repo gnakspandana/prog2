@@ -7,9 +7,9 @@ import time
 
 def fib_py(n):
     if n<=1:
-		return n
-	else:
-		return (fib_py(n-1) + fib_py(n-2))
+        return n
+    else:
+        return (fib_py(n-1) + fib_py(n-2))
 
 
 def matrix(n): #n number of random points
