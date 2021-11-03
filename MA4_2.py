@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# from integer import Integer
+from integer import Integer
 import random
 import matplotlib.pyplot as plt
 
@@ -31,41 +31,41 @@ def counting(n):
     return 'We found {} number of points out of {} random tries for a {} accuracy, resulting in a pi approximation of {}.'.format(count, n, count/n, 4*count/n)
     
 def main():
-    n=50
-    z= matrix(n)
-    z_x=z[0][0]
-    z_y=z[0][1]
-    print(z)
-    print("x,y",z_x,z_y)
-    incircle(z_x,z_y)
-    print(counting(n))
-    print(incircle(1,1))
-    plt.figure(figsize=(9,9))
-    # theta= linspace(0,2*np.pi,100)
-    # x=1+1*cos(theta)
-    # y=1+1*sin(theta)
-    L=[50,500,1000,5000]
-    for i in L:
-        x1,y1=[],[]
-        x2,y2=[],[]
-        z=matrix(i)
-        for j in range(0, len(z)):
-            if (incircle(z[j][0],z[j][1])):
-                x1.append(z[j][0])
-                y1.append(z[j][1])
-            else:
-                x2.append(z[j][0])
-                y2.append(z[j][1])
-        plt.subplot(2,2,(L.index(i)+1))
-        #plt.plot(x,y,clor='red')
-        plt.scatter(x1,y1, color='red')
-        plt.scatter(x2,y2, color='blue')
-        plt.plot()
+    # n=50
+    # z= matrix(n)
+    # z_x=z[0][0]
+    # z_y=z[0][1]
+    # print(z)
+    # print("x,y",z_x,z_y)
+    # incircle(z_x,z_y)
+    # print(counting(n))
+    # print(incircle(1,1))
+    # plt.figure(figsize=(9,9))
+    # # theta= linspace(0,2*np.pi,100)
+    # # x=1+1*cos(theta)
+    # # y=1+1*sin(theta)
+    # L=[50,500,1000,5000]
+    # for i in L:
+    #     x1,y1=[],[]
+    #     x2,y2=[],[]
+    #     z=matrix(i)
+    #     for j in range(0, len(z)):
+    #         if (incircle(z[j][0],z[j][1])):
+    #             x1.append(z[j][0])
+    #             y1.append(z[j][1])
+    #         else:
+    #             x2.append(z[j][0])
+    #             y2.append(z[j][1])
+    #     plt.subplot(2,2,(L.index(i)+1))
+    #     #plt.plot(x,y,clor='red')
+    #     plt.scatter(x1,y1, color='red')
+    #     plt.scatter(x2,y2, color='blue')
+    #     plt.plot()
         
-    # f = Integer(5)
-    # print(f.get())
-    # f.set(7)
-    # print(f.get())
+    f = Integer(5)
+    print(f.get())
+    f.set(7)
+    print(f.get())
 
 if __name__ == '__main__':
     main()
