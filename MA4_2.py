@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import time
 
 def fib_py(n):
-	if n<=1:
+    if n<=1:
 		return n
 	else:
 		return (fib_py(n-1) + fib_py(n-2))
@@ -76,27 +76,21 @@ def main():
 	tc = []
 	for n in range(30,45):
 		f = Integer(n)
-		tstart = time . perf_counter ()
+		tstart = time.perf_counter ()
 		f.fib()
-		tstop = time . perf_counter ()
+		tstop = time.perf_counter ()
 		ttaken = tstop - tstart
 		tc.append(ttaken)
 		nc.append(n)
 	print(tc)
-# 	# fib 47
-# 	f = Integer(47)
-# 	tstart = time . perf_counter ()
-# 	f.fib()
-# 	tstop = time . perf_counter ()
-# 	print (f" Measured time in C++ : {tstop - tstart } seconds ")
 		
 	# Python timings
 	np = []
 	tp = []
 	for n in range(30,45):
-		tstart = time . perf_counter ()
+		tstart = time.perf_counter ()
 		fib_py(n)
-		tstop = time . perf_counter ()
+		tstop = time.perf_counter ()
 		ttaken = tstop - tstart
 		np.append(n)
 		tp.append(ttaken)
