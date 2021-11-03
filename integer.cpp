@@ -6,14 +6,26 @@ class Integer{
 		Integer(int);
 		int get();
 		void set(int);
+		int a,b,c;
 	private:
 		int val;
 	};
  
 Integer::Integer(int n){
 	val = n;
+	a=0;
+	b=1;
+	cout <<a<<" "<<b;
+	//using loop for fibonacci
+	for (int i=1;i<=n-2;i++){
+	//adding pervious terms to get the next term
+    	c=a+b;
+    	cout <<" "<<c;
+    	a=b;
+    	b=c;
+    	}
 	}
- 
+
 int Integer::get(){
 	return val;
 	}
